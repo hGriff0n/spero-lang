@@ -1,21 +1,23 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
 title: Spero
 email: ghooper96@gmail.com
+
 description: > # this means to ignore newlines until "baseurl:"
-  This is the website for the Spero language. Currently, Spero is
-  Still in the design & development phases, but it will be
-  A functional-styled compiled programming language.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
+  This is the website for the Spero programming language. Currently
+  Spero is still in the design and development stages, but it will
+  be a functional, OOP-styled static programming language
+
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://hgriff0n.github.io/spero-lang" # the base hostname & protocol for your site
+twitter_username: ghooper96
 github_username:  hGriff0n
 
-# Build settings
-markdown: kramdown
+# Exclude from Build
+exclude:
+    - ".git"
+    - "serve.bat"
+    - "mkpost.rb"
+
+gems:
+    - jekyll-paginate
+    #- jekyll-feed
