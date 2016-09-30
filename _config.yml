@@ -1,23 +1,31 @@
 # Site settings
 title: Spero
-email: ghooper96@gmail.com
+description: 'spero-lang - the website for the Spero language'
+url: 'https://hgriff0n.github.io/spero-lang'
+baseurl: '/spero-lang/'
+repository: hGriff0n/spero-lang
+# google_analytics: 'UA-XXXXXX-X'
+# disqus_shortname: 'your-disqus-name'
 
-description: > # this means to ignore newlines until "baseurl:"
-  This is the website for the Spero programming language. Currently
-  Spero is still in the design and development stages, but it will
-  be a functional, OOP-styled static programming language
+author:
+  name: 'Grayson Hooper'
+  email: ghooper96@gmail.com
+  twitter_username: ghooper96
+  github_username:  hgriff0n
+  linkedin_username:  hgriff0n
 
-baseurl: "/spero-lang/" # the subpath of your site, e.g. /blog/
-url: "https://hgriff0n.github.io/spero-lang" # the base hostname & protocol for your site
-twitter_username: ghooper96
-github_username:  hGriff0n
+paginate: 5
 
-# Exclude from Build
-exclude:
-    - ".git"
-    - "serve.bat"
-    - "mkpost.rb"
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
 
-gems:
-    - jekyll-paginate
-    #- jekyll-feed
+# Build settings
+destination: _site
+
+gems: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']

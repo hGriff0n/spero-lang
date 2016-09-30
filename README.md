@@ -1,45 +1,45 @@
-Twenty by HTML5 UP
-html5up.net | @n33co
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+# jekyll-uno
 
+Jekyll-Uno - a minimal, responsive theme for Jekyll based on the [Uno](https://github.com/daleanthony/Uno) theme for Ghost.
 
-This is Twenty, a minimal, multi-page responsive site template for HTML5 UP.
+> :warning:
+  This theme requires ruby and rubygems installed
 
-As the name implies, this is my twentieth (!) design for HTML5 UP. Since the last
-few have been single page affairs, I decided to go with something a bit more conventional
-and threw in four extra page layouts. Beyond that, it's the usual drill: fully responsive,
-built on HTML5/CSS3/skel, and CCA licensed like all my other stuff. Sass sources are
-also included for those of you into that sort of thing (entirely optional).
+### Features
 
-Special thanks to Michael Domaradzki (md.photomerchant.net) for allowing me to use
-his excellent photos in Twenty's demo*.
+* Clean layout
+* Resposive layout
+* Pagination
+* Syntax highlighting
+* Social links
+* Tags listing page
+* Categories listing page
+* Google Analytics integration
+* Disqus integration
 
-(* = Not included! Only meant for use with my own on-site demo, so please do NOT download
-and/or use any of Michael's work without his explicit permission!)
+---
 
-AJ
-n33.co @n33co dribbble.com/n33
+### Install and Test
 
+1. Download or clone repo `git clone git@github.com:joshgerdes/jekyll-uno.git`
+2. Enter the folder: `cd jekyll-uno/`
+3. If you don't have bundler installed: `gem install bundler`
+3. Install Ruby gems: `bundle install`
+4. Start Jekyll server: `bundle exec jekyll serve --watch`
 
-Credits:
+Access via: [http://localhost:4000/jekyll-uno/](http://localhost:4000/jekyll-uno/)
 
-	Demo Images:
-		Michael Domaradzki (md.photomerchant.net)
-			"Night Vision"
-			"At the Station II"
-			"Airchitecture II"
-			"Livewires II"
-			"Midnite Xpress I"
+---
 
-	Icons:
-		Font Awesome (fortawesome.github.com/Font-Awesome)
+### Demo and Download
 
-	Other:
-		jQuery (jquery.com)
-		html5shiv.js (@afarkas @jdalton @jon_neal @rem)
-		CSS3 Pie (css3pie.com)
-		background-size polyfill (github.com/louisremi)
-		jquery.dropotron (n33.co)
-		jquery.scrolly (n33.co)
-		jquery.scrollgress (n33.co)
-		skel (n33.co)
+[Demo](http://joshgerdes.com/jekyll-uno/)
+[Download](https://github.com/joshgerdes/jekyll-uno/archive/master.zip)
+
+![jekyll-uno - free Jekyll theme](/screenshot.png)
+
+---
+
+### Copyright and license
+
+It is under [the MIT license](/LICENSE).
