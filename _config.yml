@@ -1,18 +1,16 @@
 # Site settings
-title: Spero
-description: 'spero-lang - the website for the Spero language'
 url: 'https://hgriff0n.github.io/spero-lang'
 baseurl: '/spero-lang/'
 repository: hGriff0n/spero-lang
 # google_analytics: 'UA-XXXXXX-X'
 # disqus_shortname: 'your-disqus-name'
 
-author:
-  name: 'Grayson Hooper'
-  email: ghooper96@gmail.com
-  twitter_username: ghooper96
-  github_username:  hgriff0n
-  linkedin_username:  hgriff0n
+# author:
+#   name: 'Grayson Hooper'
+#   email: ghooper96@gmail.com
+#   twitter_username: ghooper96
+#   github_username:  hgriff0n
+#   linkedin_username:  hgriff0n
 
 paginate: 5
 

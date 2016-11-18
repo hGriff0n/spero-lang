@@ -3,8 +3,8 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{{ site.description }}">
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.data.defines.title }}{% endif %}</title>
+  <meta name="description" content="{{ site.data.defines.description }}">
   <meta name="author" content="{{ site.author.name }}">
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
@@ -13,12 +13,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="{{ site.title }}">
-  <meta name="twitter:description" content="{{ site.description }}">
+  <meta name="twitter:title" content="{{ site.data.defines.title }}">
+  <meta name="twitter:description" content="{{ site.data.defines.description }}">
 
   <meta property="og:type" content="article">
-  <meta property="og:title" content="{{ site.title }}">
-  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:title" content="{{ site.data.defines.title }}">
+  <meta property="og:description" content="{{ site.data.defines.description }}">
 
   <link rel="apple-touch-icon" sizes="57x57" href="{{ "assets/img/favicons/apple-touch-icon-57x57.png" | prepend: site.baseurl }}">
   <link rel="apple-touch-icon" sizes="60x60" href="{{ "assets/img/favicons/apple-touch-icon-60x60.png" | prepend: site.baseurl }}">
@@ -42,5 +42,5 @@
 
   <link rel="stylesheet" href="{{ "assets/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl }}feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.data.defines.title }}" href="{{ site.baseurl }}feed.xml">
 </head>
