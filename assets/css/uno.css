@@ -249,10 +249,11 @@ pre code {
 	width: 60%;
 	max-width: 800px;
 	margin-left: 40%;
+	height: 90%;
 }
 
 .content-wrapper__inner {
-	margin: 0 10%;
+	margin: 0 40px;
 	padding: 50px 0;
 }
 
@@ -975,4 +976,14 @@ input[type="tel"]:-ms-input-placeholder {
 .page-scroll:hover {
 	background-color: lightgray;
 	text-decoration: none;
+	cursor: pointer;
+}
+
+.demo-part {
+	float: left;
+}
+
+.code-demo {
+	/*height: auto;*/
+	overflow: auto;
 }

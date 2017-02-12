@@ -179,7 +179,7 @@ include("https://cdn.jsdelivr.net/ace/1.1.3/noconflict/ace.js", function () {
 
                 // req.setRequestHeader("Content-Type", "application/json");
                 // req.send(data);
-                callback(ERROR, "I haven't setup the runner yet. Please wait or be a dear and do it yourself");
+                callback(ERROR, "I haven't setup the runner yet. Please wait or be a dear and make it for me");
             }
 
             // The callback to runProgram
