@@ -127,58 +127,59 @@ include("https://cdn.jsdelivr.net/ace/1.1.3/noconflict/ace.js", function () {
             // Dispatches a XMLHttpRequest to the Rust playpen, running the program, and
             // issues a callback to `callback` with the result (or null on error)
             function runProgram(program, callback) {
-                var req = new XMLHttpRequest();
-                var data = JSON.stringify({
-                    version: "beta",
-                    optimize: "0",
-                    code: program
-                });
+                // var req = new XMLHttpRequest();
+                // var data = JSON.stringify({
+                //     version: "beta",
+                //     optimize: "0",
+                //     code: program
+                // });
 
-                req.timeout = 6000;
+                // req.timeout = 6000;
 
-                // console.log("Sending", data);
-                req.open('POST', "https://play.rust-lang.org/evaluate.json", true);
-                req.onload = function (e) {
-                    var statusCode = false;
-                    var result = null;
+                // // console.log("Sending", data);
+                // req.open('POST', "https://play.rust-lang.org/evaluate.json", true);
+                // req.onload = function (e) {
+                //     var statusCode = false;
+                //     var result = null;
 
-                    if (req.readyState === 4 && req.status === 200) {
-                        result = JSON.parse(req.response);
+                //     if (req.readyState === 4 && req.status === 200) {
+                //         result = JSON.parse(req.response);
 
-                        // handle application errors from playpen
-                        if (typeof result['error'] === 'string') {
-                            statusCode = ERROR;
-                            result = 'Playpen Error: ' + result['error'];
-                        } else if (typeof result['result'] === 'string') {
-                            statusCode = SUCCESS;
-                            result = result['result'];
+                //         // handle application errors from playpen
+                //         if (typeof result['error'] === 'string') {
+                //             statusCode = ERROR;
+                //             result = 'Playpen Error: ' + result['error'];
+                //         } else if (typeof result['result'] === 'string') {
+                //             statusCode = SUCCESS;
+                //             result = result['result'];
 
-                            // handle rustc errors/warnings
-                            // Need server support to get an accurate version of this.
-                            if (result.indexOf("error:") !== -1) {
-                                statusCode = ERROR;
-                            } else if (result.indexOf("warning:") !== -1) {
-                                statusCode = WARNING;
-                            }
-                        }
-                    }
+                //             // handle rustc errors/warnings
+                //             // Need server support to get an accurate version of this.
+                //             if (result.indexOf("error:") !== -1) {
+                //                 statusCode = ERROR;
+                //             } else if (result.indexOf("warning:") !== -1) {
+                //                 statusCode = WARNING;
+                //             }
+                //         }
+                //     }
 
-                    callback(statusCode, result);
-                };
+                //     callback(statusCode, result);
+                // };
 
-                req.onerror = function (e) {
-                    callback(false, null);
-                };
+                // req.onerror = function (e) {
+                //     callback(false, null);
+                // };
 
-                req.ontimeout = function (e) {
-                    var statusCode = ERROR;
-                    var result = "play.rust-lang.org not responding, please check back later";
+                // req.ontimeout = function (e) {
+                //     var statusCode = ERROR;
+                //     var result = "play.rust-lang.org not responding, please check back later";
 
-                    callback(statusCode, result);
-                }
+                //     callback(statusCode, result);
+                // }
 
-                req.setRequestHeader("Content-Type", "application/json");
-                req.send(data);
+                // req.setRequestHeader("Content-Type", "application/json");
+                // req.send(data);
+                callback(ERROR, "I haven't setup the runner yet. Please wait or be a dear and do it yourself");
             }
 
             // The callback to runProgram
