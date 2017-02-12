@@ -47,10 +47,10 @@ def main = () -> {
 
     for char in program do
         char.match {
-            '+' -> accumulator += 1,
-            '-' -> accumulator -= 1,
-            '*' -> accumulator *= 2,
-            '/' -> accumulator /= 2,
+            '+' -> acc += 1,
+            '-' -> acc -= 1,
+            '*' -> acc *= 2,
+            '/' -> acc /= 2,
             _ -> ()
         }
 
