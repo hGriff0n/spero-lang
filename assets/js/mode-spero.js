@@ -46,11 +46,15 @@ ace.define("ace/mode/spero_highlight_rules",
                         regex: '\\b(?:use|mod|def|let|static|if|else|loop|while|for|yield|wait|return|do|mut|impls|in|continue|break|self|super)\\b'
                     },
                     {
+                        token: 'constant.language.spero',
+                        regex: '\\b(?:true|false)\\b'
+                    },
+                    {
                         token: 'system.nohighlight.spero',
                         regex: '[a-z][a-zA-Z0-9_]*'
                     },
                     {   // TODO: Get to highlight differently
-                        token: 'storage.type.spero',
+                        token: 'type.spero',
                         regex: '[A-Z][a-zA-Z0-9_]*([&*]|(\\.\\.))?'
                     },
                     {
@@ -84,10 +88,6 @@ ace.define("ace/mode/spero_highlight_rules",
                     //     token: 'support.constant.source.spero',
                     //     regex: '\\b(?:EXIT_FAILURE|EXIT_SUCCESS|RAND_MAX|EOF|SEEK_SET|SEEK_CUR|SEEK_END|_IOFBF|_IONBF|_IOLBF|BUFSIZ|FOPEN_MAX|FILENAME_MAX|L_tmpnam|TMP_MAX|O_RDONLY|O_WRONLY|O_RDWR|O_APPEND|O_CREAT|O_EXCL|O_TRUNC|S_IFIFO|S_IFCHR|S_IFBLK|S_IFDIR|S_IFREG|S_IFMT|S_IEXEC|S_IWRITE|S_IREAD|S_IRWXU|S_IXUSR|S_IWUSR|S_IRUSR|F_OK|R_OK|W_OK|X_OK|STDIN_FILENO|STDOUT_FILENO|STDERR_FILENO)\\b'
                     // },
-                    {
-                        token: 'constant.language.spero',
-                        regex: '\\b(?:true|false)\\b'
-                    },
                     {
                         token: 'constant.numeric.hex.spero',
                         regex: '0x[a-fA-F0-9]+'

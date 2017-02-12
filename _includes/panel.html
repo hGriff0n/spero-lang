@@ -1,11 +1,5 @@
-<span class="mobile btn-mobile-menu">
-  <i class="icon icon-list btn-mobile-menu__icon"></i>
-  <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
-</span>
-  
 <header class="panel-cover" style="background-image: url({{ "assets/img/cover.jpg" | prepend: site.baseurl }})">
   <div class="panel-main">
-
     <div class="panel-main__inner panel-inverted">
     <div class="panel-main__content">
         <a href="{{ site.baseurl }}" title="link to home of {{ site.data.defines.title }}">
@@ -31,7 +25,7 @@
               
               <li class="navigation__item">
                 <a href="https://github.com/hGriff0n/spero" title="{{ site.data.defines.title }} on GitHub" target="_blank">
-                  <i class="icon icon-social-github"></i>
+                  <!--<i class="icon icon-social-github"></i>-->
                   GitHub
                 </a>
               </li>
@@ -39,19 +33,15 @@
               <!-- TODO: Turn into mailing list -->
               <li class="navigation__item">
                 <a href="mailto:{{ site.author.email }}" title="Email {{ site.author.email }}" target="_blank">
-                  <i class="icon icon-mail"></i>
-                  <span>List</span>
+                  <!--<i class="icon icon-mail"></i>-->
+                  List
                 </a>
               </li>
             </ul>
           </nav>
-
         </div>
-
       </div>
-
     </div>
-
     <div class="panel-cover--overlay"></div>
   </div>
 </header>
