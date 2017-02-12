@@ -973,7 +973,7 @@ input[type="tel"]:-ms-input-placeholder {
 }
 
 /*I don't like the highlighting yet*/
-.page-scroll:hover {
+#demo:hover, #feat:hover, #tutr:hover {
 	background-color: lightgray;
 	text-decoration: none;
 	cursor: pointer;
