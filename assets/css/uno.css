@@ -246,10 +246,10 @@ pre code {
 .content-wrapper {
 	z-index: 800;
 	top: 20%;
-	width: 60%;
-	max-width: 800px;
+	width: 70%;
+	max-width: 900px;
 	margin-left: 40%;
-	height: 90%;
+	height: auto;
 }
 
 .content-wrapper__inner {
@@ -937,7 +937,38 @@ input[type="tel"]:-ms-input-placeholder {
 	background-color: #FAFAFA;
 }
 
-/* TODO: Look into changing theme to get one I want */
+.navbar.navbar-spero {
+	/*left: 30%;*/
+	margin-left: 530px;
+	width: 100%;
+}
+
+.navbar-spero ul {
+	padding-top: 20px;
+	padding-bottom: 10px;
+	font-size: 24px;
+}
+
+.navbar-spero ul li {
+	display: inline;
+	padding-right: 200px;
+}
+
+/*I don't like the highlighting yet*/
+#demo:hover, #feat:hover, #tutr:hover {
+	background-color: lightgray;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.demo-part {
+	float: left;
+}
+
+.code-demo {
+	overflow: auto;
+}
+
 .ace-chrome .ace_type {
     color: darkgoldenrod;
 }
@@ -954,36 +985,10 @@ input[type="tel"]:-ms-input-placeholder {
 	color: dodgerblue !important;
 }
 
-.navbar.navbar-spero {
-	/*left: 30%;*/
-	margin-left: 530px;
-	width: 100%;
+.ace-chrome .ace_namespace {
+	color: blue;	/* darkcyan */
 }
 
-.navbar-spero ul {
-	/*padding-left: 50px;*/
-	padding-top: 20px;
-	padding-bottom: 10px;
-	font-size: 24px;
-}
-
-.navbar-spero ul li {
-	display: inline;
-	padding-right: 10%;
-}
-
-/*I don't like the highlighting yet*/
-#demo:hover, #feat:hover, #tutr:hover {
-	background-color: lightgray;
-	text-decoration: none;
-	cursor: pointer;
-}
-
-.demo-part {
-	float: left;
-}
-
-.code-demo {
-	/*height: auto;*/
-	overflow: auto;
+.ace-chrome .ace_constant.ace_character.ace_escape {
+	color: darkred;
 }

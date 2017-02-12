@@ -9,7 +9,7 @@
     {% include panel.html %}
 
     <nav class="navbar navbar-spero navbar-fixed-top">
-      <ul class="nav navbar-nav" style="padding-left: 15px">
+      <ul class="nav navbar-nav" style="padding-left: 80px">
         <li><a id="demo">Demo</a></li>
         <li><a id="feat">Features</a></li>
         <li><a id="tutr">Tutorial</a></li>
@@ -35,13 +35,27 @@
           <div id="active-code">
             <button type="button" class="btn btn-primary btn-small" id="run-code">Run</button>
             <div id="editor"># This code is editable and runnable!
-def Foo['a'] = {
-    let bar = mut 0xab :: Int
-    let str = "Hello"
+mod spero:demo
 
-    @mutable
-    def baz = () -> bar += 1
-    def giveFalse = () -> false
+def main = () -> {
+    # A simple integer calculator:
+    # `+` or `-` means add or subtract by 1
+    # `*` or `/` means multiply or divide by 2
+
+    let program = "+ + * - /";
+    let acc = mut 0;
+
+    for char in program do
+        char.match {
+            '+' -> accumulator += 1,
+            '-' -> accumulator -= 1,
+            '*' -> accumulator *= 2,
+            '/' -> accumulator /= 2,
+            _ -> ()
+        }
+
+    "The program \"{}\" evaluates to {}"
+        .std:io:println(program, acc)
 }</div>
             <div id="result" data-msg-running="Running...">
               <a id="playlink"><i class="icon-link-ext"></i></a>

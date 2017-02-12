@@ -23,37 +23,57 @@ ace.define("ace/mode/spero_highlight_rules",
                         regex: '@[a-z][a-zA-Z$_]*!?'
                     },
                     {
-                        token: 'string.quoted.single.source.spero',
+                        token: 'string.quoted.single.spero',
                         regex: "'(?:[^'\\\\]|" + stringEscape + ")'"
                     },
                     {
-                        token: 'string.quoted.double.source.spero',
+                        token: 'string.quoted.double.spero',
                         regex: '"',
-                        push:
-                        [{
-                            token: 'string.quoted.double.source.spero',
-                            regex: '"',
-                            next: 'pop'
-                        },
-                        {
-                            token: 'constant.character.escape.source.spero',
-                            regex: stringEscape
-                        },
-                        { defaultToken: 'string.quoted.double.source.spero' }]
+                        push: [
+                            {
+                                token: 'string.quoted.double.spero',
+                                regex: '"',
+                                next: 'pop'
+                            },
+                            {
+                                token: 'constant.character.escape.spero',
+                                regex: stringEscape
+                            },
+                            { defaultToken: 'string.quoted.double.spero' },
+                        ],
                     },
                     {
                         token: 'keyword.spero',
-                        regex: '\\b(?:use|mod|def|let|static|if|else|loop|while|for|yield|wait|return|do|mut|impls|in|continue|break|self|super)\\b'
+                        regex: 'mod ',
+                        push: [
+                            {
+                                token: [ 'namespace.spero', 'nohighlight.spero' ],
+                                regex: '([a-z][a-zA-Z_]*)(:)',
+                            },
+                            {
+                                token: 'namespace.spero',
+                                regex: '[a-z][a-zA-Z_]*',
+                                next: 'pop'
+                            },
+                        ],
+                    },
+                    {
+                        token: [ 'namespace.spero', 'nohighlight.spero' ],
+                        regex: '([a-z][a-zA-Z_]*)(:)'
+                    },
+                    {
+                        token: 'keyword.spero',
+                        regex: '\\b(?:use|def|let|static|if|else|loop|while|for|match|yield|wait|return|do|mut|impls|in|continue|break|self|super)\\b'
                     },
                     {
                         token: 'constant.language.spero',
                         regex: '\\b(?:true|false)\\b'
                     },
                     {
-                        token: 'system.nohighlight.spero',
+                        token: 'nohighlight.spero',
                         regex: '[a-z][a-zA-Z0-9_]*'
                     },
-                    {   // TODO: Get to highlight differently
+                    {
                         token: 'type.spero',
                         regex: '[A-Z][a-zA-Z0-9_]*([&*]|(\\.\\.))?'
                     },
@@ -73,7 +93,7 @@ ace.define("ace/mode/spero_highlight_rules",
                         token: 'comment.line.spero',
                         regex: '#.*$'
                     },
-                    {   // Prevent some system chracters from being highlighted (some of these may not be necessary)
+                    {   // Prevents some system chracters from being highlighted (some of these may not be necessary)
                         token: 'system.operator.spero',
                         regex: '[&~!\?]|->'
                     },
