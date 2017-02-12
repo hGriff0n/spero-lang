@@ -75,7 +75,7 @@ ace.define("ace/mode/spero_highlight_rules",
                     },
                     {
                         token: 'type.spero',
-                        regex: '[A-Z][a-zA-Z0-9_]*([&*]|(\\.\\.))?'
+                        regex: '[A-Z][a-zA-Z0-9_]*([&*]|( mut\\*)|(\\.\\.))?'
                     },
                     {
                         token: 'comment.start.block.spero',
