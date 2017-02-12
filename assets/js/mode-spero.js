@@ -63,7 +63,7 @@ ace.define("ace/mode/spero_highlight_rules",
                     },
                     {
                         token: 'keyword.spero',
-                        regex: '\\b(?:use|def|let|static|if|else|loop|while|for|match|yield|wait|return|do|mut|impls|in|continue|break|self|super)\\b'
+                        regex: '\\b(?:use|def|let|static|if|else|loop|while|for|match|yield|wait|return|do|mut|impls|in|continue|break|self|super|as)\\b'
                     },
                     {
                         token: 'constant.language.spero',
