@@ -270,7 +270,7 @@ ul.laundry-list {
   outline: none;
 }
 
- [class^="icon-"]:before, [class*=" icon-"]:before {
+[class^="icon-"]:before, [class*=" icon-"]:before {
   cursor: pointer;
   cursor: hand;               /* cursor: hand ensures IE 5.5 */
   font-family: "fontello";
