@@ -49,11 +49,11 @@ def main = () -> {
 
     for char in program do
         char.match {
-            '+' -> acc += 1,
-            '-' -> acc -= 1,
-            '*' -> acc *= 2,
-            '/' -> acc /= 2,
-            _ -> ()
+            case '+' -> acc += 1,
+            case '-' -> acc -= 1,
+            case '*' -> acc *= 2,
+            case '/' -> acc /= 2,
+            case _ -> ()
         }
 
     "The program \"{}\" evaluates to {}"
