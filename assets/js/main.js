@@ -71,7 +71,6 @@ function calculatorDemo() {
 mod spero:demo
 
 def main = () -> {
-    # A simple integer calculator:
     # \`+\` or \`-\` means add or subtract by 1
     # \`*\` or \`/\` means multiply or divide by 2
 
@@ -209,4 +208,8 @@ def main = () -> {
     let f = f
     f.performBar
 }`);
+}
+
+function setupDefaultDemoSnippet() {
+  calculatorDemo();
 }

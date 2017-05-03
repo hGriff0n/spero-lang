@@ -79,6 +79,7 @@ include("https://cdn.jsdelivr.net/ace/1.1.3/noconflict/ace.js", function () {
             // JS exists, display ACE editor
             staticCode.style.display = "none";
             activeCode.style.display = "block";
+            console.log("ace");
 
             // Setting up ace editor
             var editor = ace.edit("editor");
@@ -316,6 +317,9 @@ include("https://cdn.jsdelivr.net/ace/1.1.3/noconflict/ace.js", function () {
             editor.on('blur', function () {
                 editor.setHighlightActiveLine(false);
             });
+
+            // Fill in the editor
+            setupDefaultDemoSnippet();
         }());
 
     });

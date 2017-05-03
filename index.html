@@ -16,11 +16,13 @@
       </ul>
     </nav>
 
-    <!-- FIND: Demo -->
+
+
+    <!-- Demo Tab: Provides a demo test environment and some example programs -->
     <div class="content-wrapper" id="demo-page">
       <!-- Whatever goes above the demo text box -->
       <div class="content-wrapper__inner" style="padding-bottom: 20px">
-        <h2 class="post-list__post-title post-title"><a>Here's a simple Spero demo</a></h2>
+        <h2 class="post-list__post-title post-title">Here's a simple Spero demo</h2>
         <p class="excerpt">Try out one of these programs to see how Spero looks and feels or write your own in the editor below<br>
         Just click "Run" and we'll compile and run the program for you, sending whatever output back to your screen<br>
         <br>
@@ -36,7 +38,7 @@
           <p>Sample Programs:</p>
           <ul id="demo-list">
             <li id="hw" onclick="helloWorldDemo();">Hello World</li>
-            <li id="sc" class="curr-list-item" onclick="calculatorDemo();">Simple Calculator</li>
+            <li id="sc" onclick="calculatorDemo();">Simple Calculator</li>
             <li id="ep" onclick="palindromeDemo();">Euler Palindrome</li>
             <li id="is" onclick="insertionSortDemo();">Insertion Sort</li>
             <li id="se" onclick="erasthosenesDemo();">Sieve of Erasthosenes</li>
@@ -48,29 +50,7 @@
         <div class="col-md-7 demo-part">
           <div id="active-code">
             <button type="button" class="btn btn-primary btn-small" id="run-code">Run</button>
-            <div id="editor"># This code is editable and runnable!
-mod spero:demo
-
-def main = () -> {
-    # A simple integer calculator:
-    # `+` or `-` means add or subtract by 1
-    # `*` or `/` means multiply or divide by 2
-
-    let program = "+ + * - /";
-    let acc = mut 0;
-
-    for char in program do
-        char.match {
-            case '+' -> acc += 1
-            case '-' -> acc -= 1
-            case '*' -> acc *= 2
-            case '/' -> acc /= 2
-            case _ -> ()
-        }
-
-    "The program \"{}\" evaluates to {}"
-        .std:io:println(program, acc)
-}</div>
+            <div id="editor"></div>
             <div id="result" data-msg-running="Running...">
               <a id="playlink"><i class="icon-link-ext"></i></a>
             </div>
@@ -89,12 +69,14 @@ def main = () -> {
       </div>
     </div>
 
-    <!-- FIND: Features -->
+
+
+    <!-- Features Tab: Provides a quick overview of Spero features and capabilities -->
     <div class="content-wrapper" id="feat-page">
       <div class="content-wrapper__inner">
         <ol class="post-list">
           <li>
-            <h2 class="post-list__post-title post-title"><a>This is the features page</a></h2>
+            <h2 class="post-list__post-title post-title">Spero is a minimal systems language</h2>
             <p class="excerpt">Ipsum ipsum, blah blah blah</p>
             <div class="post-list__meta"></div>
             <hr class="post-list__divider">
@@ -105,12 +87,15 @@ def main = () -> {
       </div>
     </div>
 
-    <!-- FIND: Tutorial -->
+
+
+    <!-- Tutorial Tab: Links or click-through tutorial for proper Spero design -->
+    <!-- Note: If I'm doing the click-through, it'll be a good idea to have an editor here too -->
     <div class="content-wrapper" id="tutr-page">
       <div class="content-wrapper__inner">
         <ol class="post-list">
           <li>
-            <h2 class="post-list__post-title post-title"><a>This is the tutorial page</a></h2>
+            <h2 class="post-list__post-title post-title">This is the tutorial page</h2>
             <p class="excerpt">Ipsum ipsum, blah blah blah</p>
             <div class="post-list__meta"></div>
             <hr class="post-list__divider">
@@ -120,6 +105,8 @@ def main = () -> {
         <hr class="post-list__divider ">
       </div>
     </div>
+
+
 
     <script src="{{ site.baseurl }}assets/js/ace-setup.js"></script>
     <!--<script src="{{ site.baseurl }}ace-setup.js"></script>-->
