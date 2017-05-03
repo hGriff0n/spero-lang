@@ -16,96 +16,12 @@
       </ul>
     </nav>
 
+    <!-- Pages for the navigation buttons -->
+    {% include demo_page.html %}
 
+    {% include feat_page.html %}
 
-    <!-- Demo Tab: Provides a demo test environment and some example programs -->
-    <div class="content-wrapper" id="demo-page">
-      <!-- Whatever goes above the demo text box -->
-      <div class="content-wrapper__inner" style="padding-bottom: 20px">
-        <h2 class="post-list__post-title post-title">Here's a simple Spero demo</h2>
-        <p class="excerpt">Try out one of these programs to see how Spero looks and feels or write your own in the editor below<br>
-        Just click "Run" and we'll compile and run the program for you, sending whatever output back to your screen<br>
-        <br>
-        Note: This isn't currently implemented yet as the error message should make clear</p>
-        <div class="post-list__meta"></div>
-
-        <hr class="post-list__divider" style="margin-bottom: 0px;">
-      </div>
-
-      <!-- Demo text box -->
-      <div class="code-demo">
-        <div class="col-md-5 demo-part" style="padding-left: 40px">
-          <p>Sample Programs:</p>
-          <ul id="demo-list">
-            <li id="hw" onclick="helloWorldDemo();">Hello World</li>
-            <li id="sc" onclick="calculatorDemo();">Simple Calculator</li>
-            <li id="ep" onclick="palindromeDemo();">Euler Palindrome</li>
-            <li id="is" onclick="insertionSortDemo();">Insertion Sort</li>
-            <li id="se" onclick="erasthosenesDemo();">Sieve of Erasthosenes</li>
-            <li id="ct" onclick="customTypeDemo();">Custom Type</li>
-          </ul>
-          <p>Other programs may be added later, but these provide a good overview of basic systems.
-          </p>
-        </div>
-        <div class="col-md-7 demo-part">
-          <div id="active-code">
-            <button type="button" class="btn btn-primary btn-small" id="run-code">Run</button>
-            <div id="editor"></div>
-            <div id="result" data-msg-running="Running...">
-              <a id="playlink"><i class="icon-link-ext"></i></a>
-            </div>
-            <div id="static-code"><pre class="spero"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Whatever goes below the demo text-box -->
-      <div class="content-wrapper__inner" style="padding-top: 10px">
-        <hr class="post-list__divider" style="margin-top: 0px;">
-
-        <h2 class="post-list__post-title post-title"><a>Something should go down here</a></h2>
-        <p class="excerpt">But as to what, I don't really see <anything></anything></p>
-        <div class="post-list__meta"></div>
-      </div>
-    </div>
-
-
-
-    <!-- Features Tab: Provides a quick overview of Spero features and capabilities -->
-    <div class="content-wrapper" id="feat-page">
-      <div class="content-wrapper__inner">
-        <ol class="post-list">
-          <li>
-            <h2 class="post-list__post-title post-title">Spero is a minimal systems language</h2>
-            <p class="excerpt">Ipsum ipsum, blah blah blah</p>
-            <div class="post-list__meta"></div>
-            <hr class="post-list__divider">
-          </li>
-        </ol>
-
-        <hr class="post-list__divider ">
-      </div>
-    </div>
-
-
-
-    <!-- Tutorial Tab: Links or click-through tutorial for proper Spero design -->
-    <!-- Note: If I'm doing the click-through, it'll be a good idea to have an editor here too -->
-    <div class="content-wrapper" id="tutr-page">
-      <div class="content-wrapper__inner">
-        <ol class="post-list">
-          <li>
-            <h2 class="post-list__post-title post-title">This is the tutorial page</h2>
-            <p class="excerpt">Ipsum ipsum, blah blah blah</p>
-            <div class="post-list__meta"></div>
-            <hr class="post-list__divider">
-          </li>
-        </ol>
-
-        <hr class="post-list__divider ">
-      </div>
-    </div>
-
+    {% include tutorial.html %}
 
 
     <script src="{{ site.baseurl }}assets/js/ace-setup.js"></script>

@@ -47,20 +47,18 @@ $(document).ready(function () {
         cur_btn = btn;
       }
     })
+
+    // Initially hide all pages
+    page.hide();
   }
 
-  var demo = $('#demo');
-  demo.addClass('vis-pg');
-  addSwitchClick(demo, $('#demo-page'));
+  // Add the javascript call backs for the buttons and hide the pages
+  addSwitchClick($('#demo'), $('#demo-page'));
+  addSwitchClick($('#feat'), $('#feat-page'));
+  addSwitchClick($('#tutr'), $('#tutr-page'));
 
-  var feat_page = $('#feat-page');
-  feat_page.hide();
-  addSwitchClick($('#feat'), feat_page);
-
-  var tutr_page = $('#tutr-page');
-  tutr_page.hide();
-  addSwitchClick($('#tutr'), tutr_page);
-
+  // Display the current page
+  cur_btn.click();
 })
 
 function calculatorDemo() {
@@ -132,12 +130,11 @@ function insertionSortDemo() {
   $("#demo-list > li").removeClass('curr-list-item');
   $("#is").addClass('curr-list-item');
 
-  ace.edit("editor").session.setValue(`def insertionSort[T :: Comparable] =
-  (list :: mut Indexable[T, Size]&) -> {
-    ## Note: I'm not sure yet whether \`impl\` should be
-     able to capture the variable \`list\` as list is a
-     mutable reference (lifetime issues in some cases) ##
-    def impl = (l :: Size, r :: Size) -> {
+  ace.edit("editor").session.setValue(`def insertionSort![T :: Comparable] =
+  (list :: mut Indexable[T, Size]) -> {
+    use LType as Indexable[T, Size]
+
+    let impl = (list :: mut LType&, l :: Size, r :: Size) -> {
         # Partition the array
         for i in 1..{r - 1} do {
           let min = mut j;
@@ -148,12 +145,13 @@ function insertionSortDemo() {
         # Swap the partition if necessary
         list.swap(i, j).if min != j
     }
-
-    list.insertionSort(0, list.size)
+    
+    impl(list, 0, list.size)
+    list
 }
 
 def main = () ->
-    [ 3, 2, 5, 4 ].insertionSort.map("{}".std:io:println)`);
+    "{}".std:io:println([ 3, 2, 5, 4 ].insertionSort!)`);
 }
 
 function erasthosenesDemo() {

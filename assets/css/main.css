@@ -64,3 +64,39 @@ pre.highlight code,
 .curr-list-item {
   color: cadetblue;
 }
+
+.blurb-left > div {
+  float: right;
+  width: 100%;
+}
+
+.blurb-left > div > .col-md-7 {
+  float: left;
+}
+
+.blurb-left > div > .col-md-5 {
+  float: right;
+  text-align: right;
+}
+
+.blurb-left > div > .col-md-5 > img {
+  float: right;
+}
+
+.blurb-left > .post-list__divider {
+  width: 85%;
+}
+
+.blurb-right > div > .col-md-7 {
+  float: right;
+  text-align: right;
+}
+
+.blurb-right > div > .col-md-5 {
+  float: left;
+}
+
+.blurb-right > .post-list__divider {
+  width: 85%;
+  margin-left: 15%;
+}
