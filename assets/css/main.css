@@ -51,3 +51,16 @@ pre.highlight code,
   width: 100px;
   height: 100px;
 }
+
+#demo-list {
+  list-style: georgian;
+}
+
+#demo-list > li:hover {
+  cursor: pointer; cursor: hand;
+  color: #e25440;
+}
+
+.curr-list-item {
+  color: cadetblue;
+}

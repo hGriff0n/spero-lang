@@ -20,18 +20,30 @@
     <div class="content-wrapper" id="demo-page">
       <!-- Whatever goes above the demo text box -->
       <div class="content-wrapper__inner" style="padding-bottom: 20px">
-        <h2 class="post-list__post-title post-title"><a>This is the demo page</a></h2>
-        <p class="excerpt">Ipsum ipsum, blah blah blah</p>
+        <h2 class="post-list__post-title post-title"><a>Here's a simple Spero demo</a></h2>
+        <p class="excerpt">Try out one of these programs to see how Spero looks and feels or write your own in the editor below<br>
+        Just click "Run" and we'll compile and run the program for you, sending whatever output back to your screen<br>
+        <br>
+        Note: This isn't currently implemented yet as the error message should make clear</p>
         <div class="post-list__meta"></div>
 
-        <hr class="post-list__divider">
+        <hr class="post-list__divider" style="margin-bottom: 0px;">
       </div>
 
       <!-- Demo text box -->
       <div class="code-demo">
         <div class="col-md-5 demo-part" style="padding-left: 40px">
-          <p>I'm thinking a menu should go here</p>
-          <p>Provide a set of "basic" examples</p>
+          <p>Sample Programs:</p>
+          <ul id="demo-list">
+            <li id="hw" onclick="helloWorldDemo();">Hello World</li>
+            <li id="sc" class="curr-list-item" onclick="calculatorDemo();">Simple Calculator</li>
+            <li id="ep" onclick="palindromeDemo();">Euler Palindrome</li>
+            <li id="is" onclick="insertionSortDemo();">Insertion Sort</li>
+            <li id="se" onclick="erasthosenesDemo();">Sieve of Erasthosenes</li>
+            <li id="ct" onclick="customTypeDemo();">Custom Type</li>
+          </ul>
+          <p>Other programs may be added later, but these provide a good overview of basic systems.
+          </p>
         </div>
         <div class="col-md-7 demo-part">
           <div id="active-code">
@@ -49,10 +61,10 @@ def main = () -> {
 
     for char in program do
         char.match {
-            case '+' -> acc += 1,
-            case '-' -> acc -= 1,
-            case '*' -> acc *= 2,
-            case '/' -> acc /= 2,
+            case '+' -> acc += 1
+            case '-' -> acc -= 1
+            case '*' -> acc *= 2
+            case '/' -> acc /= 2
             case _ -> ()
         }
 
@@ -69,10 +81,10 @@ def main = () -> {
 
       <!-- Whatever goes below the demo text-box -->
       <div class="content-wrapper__inner" style="padding-top: 10px">
-        <hr class="post-list__divider">
+        <hr class="post-list__divider" style="margin-top: 0px;">
 
         <h2 class="post-list__post-title post-title"><a>Something should go down here</a></h2>
-        <p class="excerpt">Ipsum ipsum, blah blah blah</p>
+        <p class="excerpt">But as to what, I don't really see <anything></anything></p>
         <div class="post-list__meta"></div>
       </div>
     </div>
