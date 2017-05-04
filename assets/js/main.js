@@ -183,7 +183,7 @@ function customTypeDemo() {
   $("#demo-list > li").removeClass('curr-list-item');
   $("#ct").addClass('curr-list-item');
 
-  ace.edit("editor").session.setValue(`use std:io:*
+  ace.edit("editor").session.setValue(`use std:io:_
 
 def Foo = (s :: String) {
     let count = mut 0
@@ -197,14 +197,12 @@ def Foo = (s :: String) {
     def drop = mut () -> "Incremented {} times!".println(count)
 }
 
-# Prints "Carson is a baz!"
-# Prints "Incremented 2 times!"
 def main = () -> {
-    let f = mut "Carson".Foo
-    f.inc; f.inc
+    let f = "Carson".Foo
+    # f.inc; f.inc          Error as f isn't mutable
 
-    let f = f
-    f.performBar
+    let f = mut f
+    f.inc; f.inc
 }`);
 }
 
