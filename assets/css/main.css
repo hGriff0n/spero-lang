@@ -84,7 +84,11 @@ pre.highlight code,
 }
 
 .blurb-left > .post-list__divider {
-  width: 85%;
+  width: 45%;
+}
+
+.blurb-left > div > div > p {
+  margin-bottom: 10px;
 }
 
 .blurb-right > div > .col-md-7 {
@@ -97,6 +101,15 @@ pre.highlight code,
 }
 
 .blurb-right > .post-list__divider {
-  width: 85%;
-  margin-left: 15%;
+  width: 45%;
+  margin-left: 55%;
+}
+
+.blurb-right > div > div > p {
+  margin-bottom: 10px;
+}
+
+.code-img {
+  max-width: 140%;
+  max-height: 100px;
 }
