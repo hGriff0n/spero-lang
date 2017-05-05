@@ -1,7 +1,4 @@
 Hook up the compile-run demo system
   Hook up compiler
   Add in several example programs
-Add in demo programs
-  Also correct demo programs to have correct syntax
 Implement responsive design of the website
-Add in documentation and other notes
