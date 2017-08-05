@@ -27,6 +27,9 @@ $(document).ready(function () {
     $('.btn-mobile-menu__icon').toggleClass('icon-list icon-x-circle animated fadeIn')
   })
 
+  // Set the color of the button (while compiler functionality doesn't exist)
+  $('#run-code').css('background-color', '#839baf')
+
 
   /*
    * This section was added to implement moving pages (TODO)
@@ -119,10 +122,10 @@ def palindrome? = (n :: Size) -> {
 
 # Find the largest palindrome made by multiplying 3-digit numbers
 def main = () -> {
-  let max = 999 * 999
-  let min = 111 * 111
+    let max = 999 * 999
+    let min = 111 * 111
 
-  "{}".std:io:println({max..min}.findIf(palindrome?))
+    "{}".std:io:println({max..min}.findIf(palindrome?))
 }`);
 }
 
@@ -130,36 +133,29 @@ function insertionSortDemo() {
   $("#demo-list > li").removeClass('curr-list-item');
   $("#is").addClass('curr-list-item');
 
-  ace.edit("editor").session.setValue(`def insertionSort![T :: Comparable] =
-  (list :: mut Indexable[T, Size]) -> {
-    use LType as Indexable[T, Size]
-
-    let impl = (list :: mut LType&, l :: Size, r :: Size) -> {
-        # Partition the array
-        for i in 1..{r - 1} do {
-          let min = mut j;
-          for i in {j + 1}..list.size
-            if list(i) < list(min) min = i
+  ace.edit("editor").session.setValue(`# Perform a quick bubble sort
+def bubbleSort![T :: Comparable] =
+    (list :: mut Indexable[T, Size]) -> {
+        for top in list.size..0 {
+            for i in range(1, top) {
+                let j = i - 1
+                list.swap(i, j).if list(j) > list(i)
+            }
         }
-
-        # Swap the partition if necessary
-        list.swap(i, j).if min != j
+        list
     }
-    
-    impl(list, 0, list.size)
-    list
-}
 
 def main = () ->
-    "{}".std:io:println([ 3, 2, 5, 4 ].insertionSort!)`);
+    "{}".std:io:println([ 3, 2, 5, 4 ].bubbleSort!)`);
 }
 
 function erasthosenesDemo() {
   $("#demo-list > li").removeClass('curr-list-item');
   $("#se").addClass('curr-list-item');
 
-  ace.edit("editor").session.setValue(`# Basic Sieve of Erasthosenes
-let genPrimes = (max :: Size) ->{
+  ace.edit("editor").session.setValue(`use std:coll:Vector
+# Basic Sieve of Erasthosenes
+let genPrimes = (max :: Size) -> {
     static primes = mut [2].Vector[Size]
 
     let cur_prime = mut primes.back

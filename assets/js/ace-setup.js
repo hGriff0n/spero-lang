@@ -180,7 +180,7 @@ include("https://cdn.jsdelivr.net/ace/1.1.3/noconflict/ace.js", function () {
 
                 // req.setRequestHeader("Content-Type", "application/json");
                 // req.send(data);
-                callback(ERROR, "I haven't setup the runner yet. Please wait or help me make it on Github");
+                callback(ERROR, "Sorry, the compiler isn't finished yet. You can track the progress on Github");
             }
 
             // The callback to runProgram
