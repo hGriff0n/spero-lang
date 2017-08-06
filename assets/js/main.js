@@ -122,10 +122,12 @@ def palindrome? = (n :: Size) -> {
 
 # Find the largest palindrome made by multiplying 3-digit numbers
 def main = () -> {
+    use std:range;
+
     let max = 999 * 999
     let min = 111 * 111
 
-    "{}".std:io:println({max..min}.findIf(palindrome?))
+    "{}".std:io:println(range(max,min).findIf(palindrome?))
 }`);
 }
 
